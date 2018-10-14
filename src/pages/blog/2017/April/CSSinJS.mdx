@@ -5,7 +5,7 @@ keeping css outside of the javascript files. Now I can't get enough of it.
 
 It started with experimenting with Styled Components, which I thought was a pretty cool idea. One of the limitations 
 of styled components is that every dom node starts to become a styled component. You begin to have several styled 
-<div>`'s just to handle layout for different components. In small websites/apps this can be an alright trade off but 
+`<div>`'s just to handle layout for different components. In small websites/apps this can be an alright trade off but 
 in larger applications this gets really hairy really fast.
 
 Then about two weeks ago I decided to start messing around with Next JS. With Next comes `styled-jsx` which is a really 
@@ -17,7 +17,7 @@ From here on out you can write your regular old css, include pseudo selectors an
 However one of the benefits of writing css within a template literal is the ability to inject things from within 
 your javascript. I started with just storing my variables in seperate modules like below:
 
-```Javascript
+```js
 export default {
   a: "#F3CC31",
   b: "#4CD385",
@@ -34,7 +34,7 @@ export default {
 I used these like this:
 
 
-```Javascript
+```jsx
 <style>{`
   :root {
 
@@ -60,7 +60,7 @@ I used these like this:
 I started to realize that you can do a lot more with template literals and css. If you are used to sass or less or 
 similar setups than you probably use a few mixins or extends. Turns out mixins are just plain old javascript functions:
 
-```Javascript
+```js
 export const tablet = cssString => (
   `@media screen and (min-width: 25rem) { ${cssString} }`
 );
@@ -71,7 +71,7 @@ export const desktop = cssString => (
 
 And now I can use these "mixins" like this:
 
-```Javascript
+```jsx
 <style jsx>{`
   ${tablet(`
     .class {
