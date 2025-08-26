@@ -45,7 +45,7 @@
   "devDependencies": {
     "@mdx-js/loader": "0.15.3",
     "@mdx-js/mdx": "0.15.5",
-    "eslint": "^4.19.1",
+    "eslint": "^9.34.0",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^1.2.0",
     "loader-utils": "1.1.0",
